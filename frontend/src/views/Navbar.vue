@@ -8,7 +8,6 @@
         iLearner
       </a>
     </div>
-
     <label
       for="menu-toggle"
       class="pointer-cursor lg:hidden block"
@@ -27,12 +26,11 @@
       type="checkbox"
       id="menu-toggle"
     />
-
     <div
       class="hidden lg:flex lg:items-center lg:w-auto w-full"
       id="menu"
     >
-      <nav>
+      <nav v-if="!auth">
         <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
           <li><a
               class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 lg:mb-0 mb-2"
@@ -40,27 +38,44 @@
             >Login</a></li>
           <li>
             <router-link
-              to="/register"
+              :to="{name: 'register'}"
               class="px-3 py-1 bg-blue-600 text-white rounded inline-block font-semibold"
             >Register </router-link>
           </li>
         </ul>
       </nav>
+      <a
+        v-if="auth"
+        href="#"
+        class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor"
+      >
+        <img
+          class="rounded-full w-10 h-10 border-2 border-transparent hover:border-indigo-400"
+          src="@/assets/images/avatar.png"
+          alt="Andy Leverenz"
+        >
+      </a>
+      <a
+        v-if="auth"
+        href="#"
+        class="lg:ml-1 flex items-center justify-start lg:mb-0 mb-4 pointer-cursor py-3"
+        @click.prevent="logout"
+      >logout</a>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  mounted() {
-    const menuTarget = document.querySelector("[data-menu-toggle]");
-    const menu = document.querySelector("[data-menu]");
-
-    menuTarget.addEventListener("click", event => {
-      event.preventDefault();
-      menuTarget.lastElementChild.classList.toggle("text-brand");
-      menu.classList.toggle("hidden");
-    });
+  data() {
+    return {
+      auth: this.$store.getters.auth
+    }
+  },
+  methods: {
+    logout(){
+      this.$store.dispatch('logout')
+    }
   }
 };
 </script>

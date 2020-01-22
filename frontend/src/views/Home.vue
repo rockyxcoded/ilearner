@@ -1,94 +1,98 @@
 <template>
-  <div class="home">
-    <!-- start hero -->
-    <section
-      class="bg-blue-600 h-screen"
-      style="background-image: url('https://static.skillshare.com/assets/images/homepage/promo-banner/mari-andrew-bg-desktop.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
-    >
-      <div style="background: linear-gradient(90deg,rgba(0,0,0,0.8) 0%,transparent 100%); height: 100%;">
-        <div class="px-4 py-48">
-          <div class="flex flex-col md:flex-row">
-            <div class="w-full lg:w-4/6 lg:mx-4 lg:pr-8 text-left md:pl-10">
-              <h1
-                class="text-blue-100 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight"
-                style="font-size: 48px; line-height: 52px; font-weight: 700"
-              >
-                Self Discovery: Learn, Reflect, and Build.
-              </h1>
-              <p
-                class="text-blue-200 text-xl md:text-2xl leading-tight mt-4"
-                style="font-weight: 400; line-height: 28px;"
-              >
-                Join best-selling platform for a series of inspiring creative exercises to unlock your personal vision for the future!
-              </p>
-              <a
-                href="/login"
-                class="px-8 py-4 bg-blue-800 text-white rounded inline-block mt-8 font-semibold"
-              >Get 1 month free trial</a>
+  <div id="home">
+    <div class="bg-gray font-sans">
+      <div class="-mt-1 bg-grey-lighter">
+        <div class="container mx-auto">
+          <div class="px-16">
+            <ul class="list-reset flex">
+              <li class="text-center py-3 px-8 border-b-2 border-solid border-grey-dark"><a
+                  href="#"
+                  class="text-black"
+                >Home</a></li>
+              <li class="text-center py-3 px-8"><a
+                  href="#"
+                  class="hover:text-black"
+                >Maths</a></li>
+              <li class="text-center py-3 px-8"><a
+                  href="#"
+                  class="hover:text-black"
+                >English Lang</a></li>
+              <li class="text-center py-3 px-8"><a
+                  href="#"
+                  class="hover:text-black"
+                >Physics</a></li>
+              <li class="text-center py-3 px-8"><a
+                  href="#"
+                  class="hover:text-black"
+                >Chemistry</a></li>
+              <li class="text-center py-3 px-8"><a
+                  href="#"
+                  class="hover:text-black"
+                >Biology</a></li>
+              <li class="text-center py-3 px-8"><i class="fa fa-search fa-lg text-grey-dark"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto flex">
+        <!-- <div class="w-3/4 mx-16 py-6"> -->
+          <div class="border-b pb-8">
+            <div class="container mx-auto p-8 text-left">
+              <div class="">
+                <h3 class="text-gray-900 text-xl">Lorem ipsum dolor sit amet</h3>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate molestias, id nisi delectus necessit</p>
+              </div>
+              <div class="flex flex-row flex-wrap -mx-2">
+                <Card v-for="nun in 4" />
+              </div>
             </div>
-            <div class="w-full lg:w-2/6 lg:mx-4 lg:pr-8">
-              <div class="h-100">
-                <!-- <img
-                  src="@/assets/svg/reading.svg"
-                  alt=""
-                  class="mx-auto"
-                > -->
+          <!-- </div>
+          <div class="border-b"> -->
+            <div class="container mx-auto p-8 text-left">
+              <div class="">
+                <h3 class="text-gray-900 text-xl">Lorem ipsum dolor sit amet</h3>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate molestias, id nisi delectus necessit</p>
+              </div>
+              <div class="flex flex-row flex-wrap -mx-2">
+                <Card v-for="nun in 4" />
               </div>
             </div>
           </div>
         </div>
+        <!-- <div class="w-1/4 py-6">
+        </div> -->
       </div>
-    </section>
-    <!-- end hero -->
-    <section class="bg-gray-100 flex flex-col text-center py-16 px-4 lg:px-16 md:px-8 xl:px-24 xxl:px-40">
-      <div>
-        <h2 class="text-xl lg:text-3xl font-bold text-gray-900">Lorem ipsum dolor sit amet?</h2>
-      </div>
-
-      <div class="mt-12 sm:flex items-start justify-between sm:-mx-2">
-        <div class="w-full bg-white rounded-lg shadow-lg py-8 px-4 sm:w-1/3 sm:mx-2 lg:mx-6">
-          <div class="h-24">
-            <img
-              src="@/assets/svg/icon-home-1.svg"
-              alt=""
-              class="mx-auto"
-            >
-          </div>
-          <h4 class="text-md uppercase text-gray-800 font-bold mt-10">Lorem ipsum dolor sit amet</h4>
-          <p class="text-base text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-
-        <div class="w-full bg-white rounded-lg shadow-lg py-8 px-4 mt-6 sm:mt-0 sm:w-1/3 sm:mx-2 lg:mx-6">
-          <div class="h-24">
-            <img
-              src="@/assets/svg/icon-home-2.svg"
-              alt=""
-              class="mx-auto"
-            >
-          </div>
-          <h4 class="text-md uppercase text-gray-800 font-bold mt-10">Lorem ipsum dolor sit amet</h4>
-          <p class="text-base text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-
-        <div class="w-full bg-white rounded-lg shadow-lg py-8 px-4 mt-6 sm:mt-0 sm:w-1/3 sm:mx-2 lg:mx-6">
-          <div class="h-24">
-            <img
-              src="@/assets/svg/icon-home-3.svg"
-              alt=""
-              class="mx-auto"
-            >
-          </div>
-          <h4 class="text-md uppercase text-gray-800 font-bold mt-10">Lorem ipsum dolor sit amet</h4>
-          <p class="text-base text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "@/axios";
+import Card from "@/components/Card";
+
 export default {
   name: "home",
-  components: {}
+  methods: {
+    getUserInfo() {
+      axios({
+        method: "GET",
+        url: "/users/self"
+      })
+        .then(response => {
+          console.log(response.data);
+          const user = response.data.data;
+          this.$store.dispatch("user", user);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  },
+  mounted() {
+    this.getUserInfo();
+  },
+  components: {
+    Card
+  }
 };
 </script>
