@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <div class="bg-gray font-sans">
+    <div class="bg-gray">
       <div class="-mt-1 bg-grey-lighter">
         <div class="container mx-auto">
           <div class="px-16">
