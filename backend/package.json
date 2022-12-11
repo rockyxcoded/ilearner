@@ -15,7 +15,7 @@
     "bcrypt": "3.0.6",
     "config": "3.2.3",
     "connect-redis": "4.0.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "1.17.0",
     "http-graceful-shutdown": "2.3.2",
     "ioredis": "4.14.1",
